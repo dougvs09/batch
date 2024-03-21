@@ -13,7 +13,7 @@ public class ProcessorConfig {
     @Bean
     public ItemProcessor<Employee, Employee> processor() {
         return employee -> {
-            log.info("Employee: {}", employee);
+            log.info("Processando: {}", employee);
             return employee;
         };
     }

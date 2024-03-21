@@ -1,11 +1,12 @@
 package br.com.doug.batch.domain;
 
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
+@NoArgsConstructor
 public class Employee {
 
-    private Integer id;
     private Integer employeeId;
     private String name;
     private String role;

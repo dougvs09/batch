@@ -12,13 +12,15 @@ import org.springframework.context.annotation.Configuration;
 public class JobConfig {
 
     private final JobBuilderFactory jobBuilderFactory;
-    private final Step step;
+    private final Step stepCreateFile;
+    private final Step stepProcessFile;
 
     @Bean
     public Job job() {
         return jobBuilderFactory
                 .get("job")
-                .start(step)
+                .start(stepCreateFile)
+                .next(stepProcessFile)
                 .build();
     }
 }
